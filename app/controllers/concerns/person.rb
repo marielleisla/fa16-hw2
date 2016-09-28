@@ -8,21 +8,30 @@ class Person
 
   def nickname
     # YOUR IMPLEMENTATION HERE
-    'nickname'
+    name[0,4]
   end
 
   def birth_year
     # YOUR IMPLEMENTATION HERE
-    1990
+    2016 - age.to_i
   end
 
   def introduction
     # YOUR IMPLEMENTATION HERE
-    'introduce'
+    "name: #{name} age: #{age}"
   end
 
   def fib_number
     # YOUR IMPLMENTATION HERE
-    0
+    f0 = 0
+    f1 = 1
+    k = age.to_i
+    while k > 0 do
+        temp = f0 + f1
+        f0 = f1
+        f1 = temp
+        k = k - 1
+    end
+    f1
   end
 end

@@ -1,15 +1,15 @@
 class PagesController < ApplicationController
   def home
-    # foo = Foobar.new "baz"
-    # @baz = foo.bar :cat, sat: :dat, dat: :sat
+    foo = Foobar.new "baz"
+    @baz = foo.bar :cat, sat: :dat, dat: :sat
   end
 
   def stringify
-    stringify_instance = Stringify.new(
-      params[:name],
-      params[:adjective]
-    )
-    @text = stringify_instance.what_am_i
+      stringify_instance = Stringify.new(
+        params[:name],
+        params[:adjective]
+      )
+      @text = stringify_instance.what_am_i
   end
 
   def age
@@ -17,5 +17,8 @@ class PagesController < ApplicationController
 
   def person
     @person = Person.new params[:name], params[:age]
+  end
+
+  def me
   end
 end
